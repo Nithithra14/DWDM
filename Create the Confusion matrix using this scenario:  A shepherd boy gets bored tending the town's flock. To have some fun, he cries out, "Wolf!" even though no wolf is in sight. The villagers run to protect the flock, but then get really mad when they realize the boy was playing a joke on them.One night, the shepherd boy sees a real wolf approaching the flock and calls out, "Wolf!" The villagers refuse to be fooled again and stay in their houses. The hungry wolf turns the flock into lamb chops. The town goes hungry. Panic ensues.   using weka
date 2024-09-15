@@ -1,0 +1,10 @@
+@RELATION shepherd_wolf
+
+@ATTRIBUTE Prediction {Wolf, No_Wolf}
+@ATTRIBUTE Actual {Wolf, No_Wolf}
+
+@DATA
+Wolf, Wolf
+No_Wolf, No_Wolf
+Wolf, No_Wolf
+No_Wolf, Wolf

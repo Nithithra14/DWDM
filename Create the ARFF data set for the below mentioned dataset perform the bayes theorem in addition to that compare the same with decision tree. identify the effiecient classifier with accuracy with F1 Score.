@@ -1,0 +1,16 @@
+@relation example
+
+@attribute A {0, 1}
+@attribute B {0, 1}
+@attribute C {0, 1}
+@attribute Class {Yes, No}
+
+@data
+0, 0, 0, No
+0, 0, 1, No
+0, 1, 0, No
+0, 1, 1, Yes
+1, 0, 0, No
+1, 0, 1, Yes
+1, 1, 0, Yes
+1, 1, 1, Yes

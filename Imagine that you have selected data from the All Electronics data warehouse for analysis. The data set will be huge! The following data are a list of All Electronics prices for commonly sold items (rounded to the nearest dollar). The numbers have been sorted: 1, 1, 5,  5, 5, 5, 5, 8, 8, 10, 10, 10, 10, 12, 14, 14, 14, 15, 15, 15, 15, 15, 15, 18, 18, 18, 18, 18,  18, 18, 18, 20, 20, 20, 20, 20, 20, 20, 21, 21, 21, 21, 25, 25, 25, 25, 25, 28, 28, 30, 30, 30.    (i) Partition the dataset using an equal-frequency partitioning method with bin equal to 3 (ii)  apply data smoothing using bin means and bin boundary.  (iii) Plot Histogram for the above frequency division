@@ -1,0 +1,25 @@
+
+prices <- c(1, 1, 5, 5, 5, 5, 5, 8, 8, 10, 10, 10, 10, 12, 14, 14, 14, 15, 15, 15, 15, 15, 15, 
+            18, 18, 18, 18, 18, 18, 18, 18, 20, 20, 20, 20, 20, 20, 20, 21, 21, 21, 21, 
+            25, 25, 25, 25, 25, 28, 28, 30, 30, 30)
+
+bin_size <- length(prices) / 3
+bins <- split(prices, ceiling(seq_along(prices) / bin_size))
+print("Equal-Frequency Partitioning:")
+print(bins)
+
+
+bin_means <- lapply(bins, function(bin) rep(mean(bin), length(bin)))
+print("Bin Means:")
+print(bin_means)
+
+
+bin_boundaries <- lapply(bins, function(bin) {
+  min_val <- min(bin)
+  max_val <- max(bin)
+  sapply(bin, function(x) ifelse(abs(x - min_val) < abs(x - max_val), min_val, max_val))
+})
+print("Bin Boundaries:")
+print(bin_boundaries)
+
+hist(prices, breaks = 10, col = "blue", main = "Price Histogram", xlab = "Price", ylab = "Frequency")

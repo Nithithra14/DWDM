@@ -1,0 +1,15 @@
+@RELATION bank_credit
+
+@ATTRIBUTE marital_status {married, single, divorced}
+@ATTRIBUTE gender {male, female}
+@ATTRIBUTE age {18..30, 30..50, 50..65, 65+}
+@ATTRIBUTE income {10K..25K, 25K..50K, 50K..65K, 65K..100K, 100K+}
+@ATTRIBUTE credit_quality {good, bad}
+
+@DATA
+married, male, 30..50, 50K..65K, good
+single, female, 18..30, 25K..50K, bad
+divorced, male, 50..65, 10K..25K, good
+married, female, 30..50, 65K..100K, good
+single, male, 18..30, 50K..65K, bad
+...

@@ -1,0 +1,21 @@
+
+min_value <- 50000
+max_value <- 100000
+value <- 80000
+normalized_value <- (value - min_value) / (max_value - min_value)
+cat("Min-Max Normalized Value:", normalized_value, "\n")
+
+
+data <- c(200, 300, 400, 600, 1000)
+
+
+data_min <- min(data)
+data_max <- max(data)
+min_max_normalized <- (data - data_min) / (data_max - data_min)
+cat("Min-Max Normalized Data:", min_max_normalized, "\n")
+
+
+data_mean <- mean(data)
+data_sd <- sd(data)
+z_score_normalized <- (data - data_mean) / data_sd
+cat("Z-Score Normalized Data:", z_score_normalized, "\n")

@@ -1,0 +1,6 @@
+csv file
+ad_id, ad_position, user_age, user_gender, ad_type, clicked
+1, 1, 25, M, banner, 1
+2, 2, 30, F, video, 0
+3, 1, 22, M, banner, 1
+...

@@ -1,0 +1,24 @@
+
+strike_rates <- c(100, 70, 60, 90, 90)
+# Min and Max values
+min_val <- min(strike_rates)
+max_val <- max(strike_rates)
+
+min_max_normalized <- (strike_rates - min_val) / (max_val - min_val)
+print(min_max_normalized)
+# Mean and Standard Deviation
+mean_val <- mean(strike_rates)
+sd_val <- sd(strike_rates)
+
+z_score_normalized <- (strike_rates - mean_val) / sd_val
+print(z_score_normalized)
+# Mean Absolute Deviation
+mad_val <- mad(strike_rates, constant = 1)
+
+
+z_score_mad_normalized <- (strike_rates - mean_val) / mad_val
+print(z_score_mad_normalized)
+
+scale_factor <- 10^ceiling(log10(max(abs(strike_rates))))
+decimal_scaled <- strike_rates / scale_factor
+print(decimal_scaled)
